@@ -1,0 +1,46 @@
+.about-section{padding:clamp(56px,8vw,110px) 0;background:var(--color-bg-secondary);overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(18px,5vw,60px);align-items:center}
+.placeholder-image{
+  aspect-ratio:1/1;border-radius:var(--radius-xl);
+  background:var(--gradient-secondary);
+  display:grid;place-items:center;
+  box-shadow:var(--shadow-xl);
+  border:1px solid rgba(255,255,255,.06);
+}
+.image-icon{font-size:64px;opacity:.9}
+.floating-card{
+  position:absolute;background:var(--color-bg-card);
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:var(--shadow-xl);
+  padding:10px 14px;border-radius:var(--radius-lg);
+  display:flex;gap:10px;align-items:center;
+  backdrop-filter:blur(12px);
+}
+.about-image-wrapper{position:relative}
+.card-1{top:10%;right:-8%}
+.card-2{bottom:14%;left:-8%}
+.about-text{color:var(--color-text-secondary);font-size:1.05rem;margin:0 0 22px}
+.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.skill-item{
+  background:rgba(30,30,30,.85);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius-lg);
+  padding:16px;
+  transition:transform .2s ease, border-color .2s ease;
+}
+.skill-item:hover{transform:translateY(-4px);border-color:rgba(201,165,103,.55)}
+.skill-icon{font-size:22px;margin-bottom:8px;color:var(--color-accent-primary)}
+.skill-item h3{font-weight:800;margin-bottom:4px}
+.skill-item p{color:var(--color-text-tertiary);font-weight:600;font-size:.95rem}
+.stats-row{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat-item{text-align:center}
+.stat-number{display:block;font-weight:900;font-size:clamp(26px,3.3vw,44px);background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-item p{color:var(--color-text-secondary);font-weight:600}
+@media (max-width:1024px){
+  .about-grid{grid-template-columns:1fr}
+  .card-1,.card-2{position:static;margin-top:12px}
+}
+@media (max-width:520px){
+  .skills-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr}
+}
