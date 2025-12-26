@@ -1,363 +1,381 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="description" content="A premium 3D portfolio with GSAP scroll animations, parallax, and modern UI." />
-  <meta name="theme-color" content="#0A0A0A" />
-  <title>Portfolio | Creative Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="description" content="A premium 3D portfolio with GSAP scroll animations, parallax, and modern UI." />
+    <meta name="theme-color" content="#0A0A0A" />
+    <title>Portfolio | Creative Developer</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/portfolio-icon.png">
 
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="css/projects.css" />
-  <link rel="stylesheet" href="css/contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/contact.css" />
 </head>
 
 <body>
-  <!-- Cursor -->
-  <div class="custom-cursor" aria-hidden="true"></div>
-  <div class="cursor-follower" aria-hidden="true"></div>
+    <!-- Cursor -->
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
 
-  <!-- Nav -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-content">
-      <a class="logo" href="#home" aria-label="Go to home">
-        <span class="logo-text">Portfolio</span>
-      </a>
+    <!-- Nav -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a class="logo" href="#home" aria-label="Go to home">
+                <span class="logo-text">Portfolio</span>
+            </a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero" id="home">
-    <canvas id="particle-canvas" aria-hidden="true"></canvas>
-
-    <div class="hero-content">
-      <div class="hero-text">
-        <span class="hero-label">Creative Developer • UI Engineer</span>
-
-        <h1 class="hero-title">
-          <span class="hero-line"><span>Crafting</span></span>
-          <span class="hero-line"><span>Premium</span></span>
-          <span class="hero-line"><span class="gradient-text">Web Experiences</span></span>
-        </h1>
-
-        <p class="hero-description">
-          Modern, fast, animation-rich websites built with clean code, strong typography, and professional color grading.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Work</a>
-          <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="scroll-indicator" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </header>
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-  <!-- About -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image-container" data-speed="0.4">
-          <div class="about-image-wrapper">
-            <div class="image-layer layer-1" data-depth="0.2">
-              <div class="placeholder-image">
-                <span class="image-icon">
-                    <img src="./assets/images/profilepic.avif">
-                </span>
-              </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-label">Creative Developer • UI Engineer</span>
+
+                <h1 class="hero-title">
+                    <span class="hero-line"><span>Crafting</span></span>
+                    <span class="hero-line"><span>Premium</span></span>
+                    <span class="hero-line"><span class="gradient-text">Web Experiences</span></span>
+                </h1>
+
+                <p class="hero-description">
+                    Modern, fast, animation-rich websites built with clean code, strong typography, and professional
+                    color grading.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
             </div>
-            <div class="floating-card card-1" data-depth="0.35">
-              <span class="card-emoji">⚡</span><span>Performance-first</span>
-            </div>
-            <div class="floating-card card-2" data-depth="0.55">
-              <span class="card-emoji">◎</span><span>Motion design</span>
-            </div>
-          </div>
         </div>
 
-        <div class="about-content" data-speed="0.2">
-          <span class="section-label">About</span>
-          <h2 class="section-title">Design that feels <span class="gradient-text">alive</span></h2>
-
-          <p class="about-text">
-            Specializing in responsive UI, GSAP scroll storytelling, and high-end visuals with production-grade performance.
-          </p>
-
-          <div class="skills-grid">
-            <div class="skill-item">
-              <div class="skill-icon">⟐</div>
-              <h3>Frontend</h3>
-              <p>HTML, CSS, JS, Accessibility, Performance.</p>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">⟠</div>
-              <h3>Motion</h3>
-              <p>GSAP, ScrollTrigger, micro-interactions.</p>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">⟡</div>
-              <h3>3D/FX</h3>
-              <p>WebGL, Three.js particles (optimized).</p>
-            </div>
-            <div class="skill-item">
-              <div class="skill-icon">⟣</div>
-              <h3>Build</h3>
-              <p>Clean structure, scalable UI patterns.</p>
-            </div>
-          </div>
-
-          <div class="stats-row">
-            <div class="stat-item">
-              <span class="stat-number" data-target="40">0</span>
-              <p>Projects</p>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="25">0</span>
-              <p>Clients</p>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-target="4">0</span>
-              <p>Years</p>
-            </div>
-          </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Projects -->
-  <section class="projects-section" id="projects">
-    <div class="projects-header container">
-      <span class="section-label">Work</span>
-      <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
-      <p class="projects-subtitle">Desktop: cinematic horizontal scroll. Mobile: clean vertical list.</p>
-    </div>
+    <!-- About -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-container" data-speed="0.4">
+                    <div class="about-image-wrapper">
+                        <div class="image-layer layer-1" data-depth="0.2">
+                            <div class="placeholder-image">
+                                <span class="image-icon">
+                                    <img src="./assets/images/profilepic.avif">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="floating-card card-1" data-depth="0.35">
+                            <span class="card-emoji">⚡</span><span>Performance-first</span>
+                        </div>
+                        <div class="floating-card card-2" data-depth="0.55">
+                            <span class="card-emoji">◎</span><span>Motion design</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="projects-container">
-      <div class="projects-wrapper" id="projectsWrapper">
-        <article class="project-card">
-          <div class="project-image">
-            <div class="placeholder-project-image gradient-bg-1"><span class="project-emoji">◇</span></div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Web App</span>
-            <h3 class="project-title">E-Commerce UI</h3>
-            <p class="project-description">Fast storefront UI with filtering, product motion, and smooth UX.</p>
-            <div class="project-tags">
-              <span class="tag">UI</span><span class="tag">GSAP</span><span class="tag">Perf</span>
+                <div class="about-content" data-speed="0.2">
+                    <span class="section-label">About</span>
+                    <h2 class="section-title">Design that feels <span class="gradient-text">alive</span></h2>
+
+                    <p class="about-text">
+                        Specializing in responsive UI, GSAP scroll storytelling, and high-end visuals with
+                        production-grade performance.
+                    </p>
+
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">⟐</div>
+                            <h3>Frontend</h3>
+                            <p>HTML, CSS, JS, Accessibility, Performance.</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⟠</div>
+                            <h3>Motion</h3>
+                            <p>GSAP, ScrollTrigger, micro-interactions.</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⟡</div>
+                            <h3>3D/FX</h3>
+                            <p>WebGL, Three.js particles (optimized).</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⟣</div>
+                            <h3>Build</h3>
+                            <p>Clean structure, scalable UI patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="40">0</span>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="25">0</span>
+                            <p>Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4">0</span>
+                            <p>Years</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="project-link" href="#" aria-label="Open project">View →</a>
-          </div>
-        </article>
+        </div>
+    </section>
 
-        <article class="project-card">
-          <div class="project-image">
-            <div class="placeholder-project-image gradient-bg-2"><span class="project-emoji">▣</span></div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Landing</span>
-            <h3 class="project-title">Brand Story</h3>
-            <p class="project-description">Scroll storytelling with parallax depth and premium typography.</p>
-            <div class="project-tags">
-              <span class="tag">Scroll</span><span class="tag">Design</span><span class="tag">A11y</span>
-            </div>
-            <a class="project-link" href="#" aria-label="Open project">View →</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image">
-            <div class="placeholder-project-image gradient-bg-3"><span class="project-emoji">◍</span></div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">3D/FX</span>
-            <h3 class="project-title">Particle Hero</h3>
-            <p class="project-description">Lightweight WebGL particles tuned for 60fps on real devices.</p>
-            <div class="project-tags">
-              <span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">UX</span>
-            </div>
-            <a class="project-link" href="#" aria-label="Open project">View →</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image">
-            <div class="placeholder-project-image gradient-bg-4"><span class="project-emoji">⧉</span></div>
-          </div>
-          <div class="project-info">
-            <span class="project-category">Dashboard</span>
-            <h3 class="project-title">Analytics UI</h3>
-            <p class="project-description">Clean layout, responsive data panels, and micro-interactions.</p>
-            <div class="project-tags">
-              <span class="tag">UI</span><span class="tag">Grid</span><span class="tag">Motion</span>
-            </div>
-            <a class="project-link" href="#" aria-label="Open project">View →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials-section">
-    <div class="container">
-      <span class="section-label">Clients</span>
-      <h2 class="section-title">Words that <span class="gradient-text">matter</span></h2>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="quote-icon">“</div>
-          <p class="testimonial-text">Crisp design, smooth motion, and fast performance. Exactly what we needed.</p>
-          <div class="client-info">
-            <div class="client-avatar">AR</div>
-            <div>
-              <div class="client-name">A. Rai</div>
-              <div class="client-role">Founder</div>
-            </div>
-          </div>
+    <!-- Projects -->
+    <section class="projects-section" id="projects">
+        <div class="projects-header container">
+            <span class="section-label">Work</span>
+            <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+            <p class="projects-subtitle">Desktop: cinematic horizontal scroll. Mobile: clean vertical list.</p>
         </div>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">“</div>
-          <p class="testimonial-text">The animations feel premium without being heavy. Great attention to detail.</p>
-          <div class="client-info">
-            <div class="client-avatar">SK</div>
-            <div>
-              <div class="client-name">S. Karki</div>
-              <div class="client-role">Product</div>
+        <div class="projects-container">
+            <div class="projects-wrapper" id="projectsWrapper">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-project-image gradient-bg-1"><span class="project-emoji">◇</span></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Web App</span>
+                        <h3 class="project-title">E-Commerce UI</h3>
+                        <p class="project-description">Fast storefront UI with filtering, product motion, and smooth UX.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">UI</span><span class="tag">GSAP</span><span class="tag">Perf</span>
+                        </div>
+                        <a class="project-link" href="#" aria-label="Open project">View →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-project-image gradient-bg-2"><span class="project-emoji">▣</span></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Landing</span>
+                        <h3 class="project-title">Brand Story</h3>
+                        <p class="project-description">Scroll storytelling with parallax depth and premium typography.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Scroll</span><span class="tag">Design</span><span class="tag">A11y</span>
+                        </div>
+                        <a class="project-link" href="#" aria-label="Open project">View →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-project-image gradient-bg-3"><span class="project-emoji">◍</span></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">3D/FX</span>
+                        <h3 class="project-title">Particle Hero</h3>
+                        <p class="project-description">Lightweight WebGL particles tuned for 60fps on real devices.</p>
+                        <div class="project-tags">
+                            <span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">UX</span>
+                        </div>
+                        <a class="project-link" href="#" aria-label="Open project">View →</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder-project-image gradient-bg-4"><span class="project-emoji">⧉</span></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Dashboard</span>
+                        <h3 class="project-title">Analytics UI</h3>
+                        <p class="project-description">Clean layout, responsive data panels, and micro-interactions.</p>
+                        <div class="project-tags">
+                            <span class="tag">UI</span><span class="tag">Grid</span><span class="tag">Motion</span>
+                        </div>
+                        <a class="project-link" href="#" aria-label="Open project">View →</a>
+                    </div>
+                </article>
             </div>
-          </div>
         </div>
+    </section>
 
-        <div class="testimonial-card">
-          <div class="quote-icon">“</div>
-          <p class="testimonial-text">Finally a portfolio that looks unique and still works perfectly on mobile.</p>
-          <div class="client-info">
-            <div class="client-avatar">JM</div>
-            <div>
-              <div class="client-name">J. Magar</div>
-              <div class="client-role">Marketing</div>
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <span class="section-label">Clients</span>
+            <h2 class="section-title">Words that <span class="gradient-text">matter</span></h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">Crisp design, smooth motion, and fast performance. Exactly what we
+                        needed.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">AR</div>
+                        <div>
+                            <div class="client-name">A. Rai</div>
+                            <div class="client-role">Founder</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">The animations feel premium without being heavy. Great attention to
+                        detail.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">SK</div>
+                        <div>
+                            <div class="client-name">S. Karki</div>
+                            <div class="client-role">Product</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">Finally a portfolio that looks unique and still works perfectly on
+                        mobile.</p>
+                    <div class="client-info">
+                        <div class="client-avatar">JM</div>
+                        <div>
+                            <div class="client-name">J. Magar</div>
+                            <div class="client-role">Marketing</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
-          <span class="section-label">Contact</span>
-          <h2 class="section-title">Let’s build something <span class="gradient-text">great</span></h2>
-          <p class="contact-description">
-            This form is wired for Netlify Forms (deploy on Netlify to store submissions).
-          </p>
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">Let’s build something <span class="gradient-text">great</span></h2>
+                    <p class="contact-description">
+                        This form is wired for Netlify Forms (deploy on Netlify to store submissions).
+                    </p>
 
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="method-icon">✉</div>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:hello@example.com">hello@example.com</a>
-              </div>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">✉</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:hello@example.com">hello@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">⌁</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Unknown, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a class="social-link" href="#"><span>GitHub</span></a>
+                        <a class="social-link" href="#"><span>LinkedIn</span></a>
+                        <a class="social-link" href="#"><span>Twitter</span></a>
+                    </div>
+                </div>
+
+                <!-- Netlify Forms (deployment-ready) -->
+                <form class="contact-form" id="contactForm" name="contact" method="POST" action="/thanks/"
+                    data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Required for Netlify form name binding -->
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <!-- Honeypot -->
+                    <div style="display:none;">
+                        <label>
+                            Don’t fill this out if you’re human:
+                            <input name="bot-field" autocomplete="off" />
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@domain.com"
+                            required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="Project inquiry" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me what you want to build…"
+                            required></textarea>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" type="submit">Send message</button>
+                </form>
+
             </div>
-            <div class="contact-method">
-              <div class="method-icon">⌁</div>
-              <div>
-                <h4>Location</h4>
-                <p>Unknown, Nepal</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="social-links">
-            <a class="social-link" href="#"><span>GitHub</span></a>
-            <a class="social-link" href="#"><span>LinkedIn</span></a>
-            <a class="social-link" href="#"><span>Twitter</span></a>
-          </div>
         </div>
+    </section>
 
-        <!-- Netlify Forms -->
-        <form class="contact-form" id="contactForm"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Portfolio || SURAJ DHAWAL</p>
+                <p class="footer-tagline">Designed for performance and clarity.</p>
+            </div>
+        </div>
+    </footer>
 
-          <p class="sr-only">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-          </p>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-          <div class="form-group">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@domain.com" required />
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input id="subject" name="subject" type="text" placeholder="Project inquiry" required />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me what you want to build…" required></textarea>
-          </div>
-
-          <button class="btn btn-primary btn-full" type="submit">Send message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>© 2025 Portfolio || SURAJ DHAWAL</p>
-        <p class="footer-tagline">Designed for performance and clarity.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- App -->
-  <script src="js/particle-system.js"></script>
-  <script src="js/scroll-animations.js"></script>
-  <script src="js/smooth-scroll.js"></script>
-  <script src="js/main.js"></script>
+    <!-- App -->
+    <script src="js/particle-system.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
