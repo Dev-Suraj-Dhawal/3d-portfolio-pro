@@ -31,24 +31,43 @@
     <div class="cursor-follower" aria-hidden="true"></div>
 
     <!-- Nav -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-content">
-            <a class="logo" href="#home" aria-label="Go to home">
-                <span class="logo-text">Portfolio</span>
-            </a>
+   <nav class="navbar" id="navbar">
+  <div class="nav-content">
+    <a class="logo" href="#home" aria-label="Go to home">
+      <span class="logo-text">Portfolio</span>
+    </a>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
+    >
+      <span></span><span></span><span></span>
+    </button>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+    <!-- Overlay (click to close) -->
+    <div class="nav-overlay" id="navOverlay" hidden></div>
+
+    <!-- Off-canvas panel -->
+    <ul class="nav-links" id="navLinks" aria-label="Primary">
+      <li class="nav-head">
+        <span class="nav-title"></span>
+        <button class="nav-close" id="navClose" type="button" aria-label="Close menu">
+          ×
+        </button>
+      </li>
+
+      <li><a class="nav-link active" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#projects">Projects</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
 
     <!-- Hero -->
     <header class="hero" id="home">
